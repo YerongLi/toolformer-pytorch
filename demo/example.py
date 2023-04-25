@@ -36,19 +36,18 @@ model = PaLM(
     dim = 512,
     depth = 2,
     heads = 8,
-    dim_head = 64,
-    num_tokens = 20000,
+    dim_head = 64
 ).cuda()
 
 # toolformer
 
 toolformer = Toolformer(
     model = model,
-    # model_seq_len = 256,
+    model_seq_len = 256,
     teach_tool_prompt = prompt,
-    # tool_id = 'Calendar',
+    tool_id = 'Calendar',
     tool = Calendar,
-    # finetune = True
+    finetune = True
 )
 
 # invoking this will
@@ -65,4 +64,3 @@ filtered_stats = toolformer(data)
 response = toolformer.sample_model_with_api_calls("How many days until the next new years?")
 
 # hopefully you see it invoke the calendar and utilize the response of the api call...
-
