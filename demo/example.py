@@ -36,7 +36,8 @@ model = PaLM(
     dim = 512,
     depth = 2,
     heads = 8,
-    dim_head = 64
+    dim_head = 64,
+    num_tokens = 20000,
 ).cuda()
 
 # toolformer
