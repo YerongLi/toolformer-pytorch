@@ -46,7 +46,7 @@ toolformer = Toolformer(
     model = model,
     # model_seq_len = 256,
     teach_tool_prompt = prompt,
-    tool_id = 'Calendar',
+    # tool_id = 'Calendar',
     tool = Calendar,
     finetune = True
 )
