@@ -48,7 +48,7 @@ toolformer = Toolformer(
     teach_tool_prompt = prompt,
     # tool_id = 'Calendar',
     tool = Calendar,
-    finetune = True
+    # finetune = True
 )
 
 # invoking this will
