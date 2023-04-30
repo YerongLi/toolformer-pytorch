@@ -80,16 +80,18 @@ input_query - A string, the input query (e.g. "what is a dog?")
 
 output - A string, the translated input query.
 '''
-def MT(input_query: str, model_name: str = "facebook/nllb-200-distilled-600M"):
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
-    input_ids = tokenizer(input_query, return_tensors='pt')
-    outputs = model.generate(
-        **input_ids,
-        forced_bos_token_id=tokenizer.lang_code_to_id["eng_Latn"], 
-        )
-    output = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
-    return output
+
+# NLLB- 600M too large
+# def MT(input_query: str, model_name: str = "facebook/nllb-200-distilled-600M"):
+#     tokenizer = AutoTokenizer.from_pretrained(model_name)
+#     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+#     input_ids = tokenizer(input_query, return_tensors='pt')
+#     outputs = model.generate(
+#         **input_ids,
+#         forced_bos_token_id=tokenizer.lang_code_to_id["eng_Latn"], 
+#         )
+#     output = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
+#     return output
 
 
 '''
@@ -232,7 +234,7 @@ if __name__ == '__main__':
 
     print(WikiSearch('What is a dog?')) # Outputs a list of strings, each string is a Wikipedia document
 
-    print(MT("Un chien c'est quoi?")) # What is a dog?
+    # print(MT("Un chien c'est quoi?")) # What is a dog?
 
     # Optional Tools
 
