@@ -240,8 +240,8 @@ if __name__ == '__main__':
 
     # print(WolframAlphaCalculator('What is 2 + 2?')) # 4
 
-    print(google_search('What is a dog?')) 
+    # print(google_search('What is a dog?')) 
     # Outputs a list of dictionaries, each dictionary is a Google Search result
 
-    print(bing_search('What is a dog?')) 
+    # print(bing_search('What is a dog?')) 
     # Outputs a list of dictionaries, each dictionary is a Bing Search result
