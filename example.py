@@ -25,8 +25,10 @@ Output:
 """
 
 data = [
-    "The current day of the week is Tuesday.",
-]
+    "The store is never open on the weekend, so today it is closed.",
+    "The number of days from now until Christmas is 30",
+    "The current day of the week is Wednesday.",
+] * 100
 
 # model - here using PaLM, but any nn.Module that returns logits in the shape (batch, seq, num_tokens) is fine
 
