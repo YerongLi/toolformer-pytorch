@@ -238,7 +238,7 @@ if __name__ == '__main__':
 
     # Optional Tools
 
-    print(WolframAlphaCalculator('What is 2 + 2?')) # 4
+    # print(WolframAlphaCalculator('What is 2 + 2?')) # 4
 
     print(google_search('What is a dog?')) 
     # Outputs a list of dictionaries, each dictionary is a Google Search result
