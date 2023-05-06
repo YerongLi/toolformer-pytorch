@@ -1,3 +1,5 @@
 x_clip
+transformers
+torch
 tqdm
 # toolformer-pytorch-0.0.2
