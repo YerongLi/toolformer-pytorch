@@ -1,5 +1,6 @@
-x_clip
+beartype
 transformers
 torch
 tqdm
+x_clip
 # toolformer-pytorch-0.0.2
